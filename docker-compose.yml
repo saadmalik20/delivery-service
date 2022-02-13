@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  mysql:
+    container_name: delivery-mysql
+    build: ./mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_USER: root
+      MYSQL_PASSWORD: pass
+    volumes:
+      - db:/var/lib/mysql
+  php:
+    container_name: delivery-php
+    build: ./php
+    ports:
+      - '80:80'
+    volumes:
+      - ./html/laravel-delivery-service:/var/www/html/laravel-delivery-service
+    
+    depends_on:
+      - mysql
+volumes:
+  db:
+
