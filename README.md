@@ -37,9 +37,10 @@ Create a dabase `delivery-service`
 - Goto path : cd /laravel-delivery-service
 - `composer install`
 - `php artisan migrate`
-- `php artisan db:seed --classs=UserSeeder`
+- `php artisan db:seed --class=UserSeeder`
 - `php artisan db:seed --class=ParcelSeeder`
 - `php artisan passport:client --personal`
+- `php artisan passport:install`
 
 - After success composer install, hit `dev.delivery.local` in your browser. :)
 
