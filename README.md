@@ -34,7 +34,7 @@ Create a dabase `delivery-service`
 ## Step Four
 
 - After successfull docker setup, goto inside docker image by exec this command `sudo docker exec -i -t delivery-php /bin/bash`
-- Goto path : cd /laravel-delivery-service
+- Goto path : `cd /laravel-delivery-service`
 - `composer install`
 - `php artisan migrate`
 - `php artisan db:seed --class=UserSeeder`
@@ -48,4 +48,10 @@ Create a dabase `delivery-service`
 
 Make sure you have `dev.delivery.local` host edit your your */etc/hosts* file
 
-php artisan passport:client --personal
+#### How to Use
+
+Open URL : http://dev.delivery.local this link will open login page.
+Please take auto generated users email from users table for login here. 
+`Password is 'password' for all auto generate users.`
+
+`(user.type: 0=sender and 1=biker)`
